@@ -28,7 +28,7 @@ Contains the scripts used for the HSC observational analysis.
 
 The main tasks include:
 
-- processing HSC PDR3 \(r\)-band galaxy images;
+- processing HSC PDR3 r-band galaxy images;
 - NoiseChisel-based source detection and background processing;
 - contaminant masking;
 - elliptical-annulus surface-brightness measurements;
@@ -69,7 +69,7 @@ Contains the scripts used for the direct HSC--TNG50 comparison.
 The main tasks include:
 
 - selection of TNG50 analogues based on stellar mass;
-- construction of synthetic TNG50 \(r\)-band stellar-light maps;
+- construction of synthetic TNG50 r-band stellar-light maps;
 - comparison of HSC and TNG50 surface-brightness profiles;
 - comparison of observed and simulated projected stellar shapes;
 - comparison of simulated stellar-light and dark-matter shapes.
@@ -88,7 +88,7 @@ The observational analysis uses data from the
 The final observational sample contains eleven independent galaxies in the
 HSC Deep layer.
 
-The main analysis uses HSC \(r\)-band images and empirical
+The main analysis uses HSC r-band images and empirical
 low-surface-brightness limits measured separately for each galaxy field.
 
 The original HSC FITS images and catalogue products are not redistributed in
@@ -102,18 +102,18 @@ The simulation analysis uses:
 
 - **TNG50-1**
 - **TNG50-1-Dark**
-- **snapshot 99 (\(z=0\))**
+- **snapshot 99 ($z=0$)**
 
 from the IllustrisTNG project.
 
 The main TNG50 population contains 991 central galaxies divided into four
 halo-mass bins centred at
 
-\[
+$$
 \log_{10}(M_{200c}/M_\odot)
 =
-11.5,\ 12.0,\ 12.5,\ 13.0.
-\]
+11.5,\ 12.0,\ 12.5,\ 13.0
+$$
 
 The original TNG50 snapshots, group catalogues, and large particle products are
 not distributed with this repository.
@@ -124,7 +124,7 @@ not distributed with this repository.
 
 The observational analysis measures:
 
-- \(r\)-band surface-brightness profiles;
+- r-band surface-brightness profiles;
 - empirical limiting surface brightness;
 - reliable radial extent of the observed stellar light;
 - projected stellar-light shape.
@@ -193,7 +193,7 @@ files inside each directory.
 
 **Author:** Richa Shree  
 **Institution:** Ruhr University Bochum  
-**Year:** 2026  
+**Year:** 2026
 
 The exact thesis title and final citation information will be added here after
 submission.
