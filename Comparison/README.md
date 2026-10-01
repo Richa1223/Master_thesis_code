@@ -22,8 +22,8 @@ physical system.
 
 The TNG50 comparison systems are selected using proximity in stellar mass.
 
-The comparison uses five nearest simulated systems for each observed HSC
-galaxy.
+The comparison uses the five nearest simulated systems in stellar mass for each
+observed HSC galaxy.
 
 Two observed galaxies, HSC-332 and HSC-75, lie below the stellar-mass range of
 the processed TNG50 comparison sample. For these systems, the nearest available
@@ -31,21 +31,21 @@ simulated galaxies are used rather than close stellar-mass matches.
 
 ## Photometric Band Matching
 
-The main TNG50 population analysis uses synthetic \(g\)-band photometry.
+The main TNG50 population analysis uses synthetic g-band photometry.
 
 For the direct HSC--TNG comparison, new TNG stellar-light maps are constructed
-in the synthetic \(r\) band so that the simulated stellar photometry is
-evaluated in the same band as the HSC observations.
+in the synthetic r band so that the simulated stellar photometry is evaluated
+in the same band as the HSC observations.
 
-The \(r\)-band stellar magnitudes correspond to Python index 5 of
+The r-band stellar magnitudes correspond to Python index 5 of
 `GFM_StellarPhotometrics`.
 
 ## Surface-Brightness Comparison
 
-Observed HSC \(r\)-band surface-brightness profiles are compared with the
-corresponding simulated TNG50 \(r\)-band stellar-light profiles.
+Observed HSC r-band surface-brightness profiles are compared with the
+corresponding simulated TNG50 r-band stellar-light profiles.
 
-The comparison is carried out as a function of physical projected radius.
+The comparison is carried out as a function of projected physical radius.
 
 The HSC measurements are restricted to the galaxy-specific radial range over
 which the observed profile remains above its adopted empirical
@@ -56,7 +56,7 @@ surface-brightness limit.
 The comparison also examines radial projected axis-ratio profiles.
 
 For the HSC galaxies, the radial stellar-light axis ratio is measured directly
-from the observed \(r\)-band images.
+from the observed r-band images.
 
 For the simulations, projected stellar-light and dark-matter axis-ratio
 profiles are measured in the same viewing direction.
@@ -97,8 +97,8 @@ Selects the five TNG50 galaxies closest in stellar mass to each HSC galaxy.
 
 ### `make_r_band_maps.py`
 
-Constructs the TNG50 synthetic \(r\)-band stellar-light maps used for the
-direct comparison with HSC.
+Constructs the TNG50 synthetic r-band stellar-light maps used for the direct
+comparison with HSC.
 
 ### `SB_comparison.py`
 
