@@ -15,7 +15,7 @@ The analysis uses:
 
 - **TNG50-1** — highest-resolution full-physics realization of TNG50
 - **TNG50-1-Dark** — corresponding dark-matter-only realization
-- **Snapshot 99** — corresponding to \(z=0\)
+- **Snapshot 99** — corresponding to z = 0
 
 The original IllustrisTNG snapshot and group-catalogue files are not included in
 this repository.
@@ -28,20 +28,15 @@ or corresponding downloaded cutouts/catalogues.
 The main TNG50 population consists of central galaxies selected from the
 friends-of-friends (FoF) halo catalogue at snapshot 99.
 
-The sample is divided into four bins in
-
-\[
-\log_{10}(M_{200c}/M_\odot)
-\]
-
-with nominal bin centres:
+The sample is divided into four 0.5-dex bins in log10(M200c/Msun), with nominal
+bin centres:
 
 - 11.5
 - 12.0
 - 12.5
 - 13.0
 
-The corresponding 0.5-dex intervals contain:
+The corresponding intervals contain:
 
 | Nominal halo-mass bin | Number of central galaxies |
 |---|---:|
@@ -51,8 +46,7 @@ The corresponding 0.5-dex intervals contain:
 | 13.0 | 21 |
 | **Total** | **991** |
 
-The central galaxy of each FoF halo is identified through
-`GroupFirstSub`.
+The central galaxy of each FoF halo is identified through `GroupFirstSub`.
 
 ## Particle Definitions
 
@@ -92,41 +86,37 @@ adaptive SPH-style projection.
 
 The main projected quantities are:
 
-- stellar mass surface density, \(\Sigma_\star\)
-- dark-matter surface density, \(\Sigma_{\rm DM}\)
+- stellar mass surface density
+- dark-matter surface density
 - stellar luminosity surface density
 - simulated stellar surface brightness
 
-The production maps use a \(512\times512\) grid extending from
-\(-R_{200c}\) to \(+R_{200c}\) in both projected directions.
+The production maps use a 512 x 512 grid extending from -R200c to +R200c in
+both projected directions.
 
 For the main TNG50 population analysis, stellar surface brightness is measured
-in the synthetic SDSS \(g\) band using index 4 of
-`GFM_StellarPhotometrics`.
+in the synthetic SDSS g band using index 4 of `GFM_StellarPhotometrics`.
 
-The later direct HSC--TNG comparison uses separate \(r\)-band maps.
+The later direct HSC--TNG comparison uses separate r-band maps.
 
 ## Projected Shape Measurements
 
 Projected stellar and dark-matter shapes are measured using weighted
 two-dimensional second moments in concentric circular annuli.
 
-The projected axis ratio is
+The projected axis ratio is defined as:
 
-\[
-q = \frac{b}{a}
-  = \sqrt{\frac{\lambda_{\rm min}}{\lambda_{\rm max}}},
-\]
+q = b/a = sqrt(lambda_min / lambda_max)
 
-where \(\lambda_{\rm min}\) and \(\lambda_{\rm max}\) are the eigenvalues of
-the projected second-moment tensor.
+where lambda_min and lambda_max are the eigenvalues of the projected
+second-moment tensor.
 
 The main population analysis uses:
 
 - annular radial measurements
-- \(5\,{\rm kpc}\) radial bins
-- stellar-mass weighting for \(q_\star\)
-- dark-matter-mass weighting for \(q_{\rm DM}\)
+- 5 kpc radial bins
+- stellar-mass weighting for q_star
+- dark-matter-mass weighting for q_DM
 - a minimum of 300 valid map pixels per annulus
 
 Both annular and cumulative profiles were explored during method development,
@@ -143,11 +133,7 @@ The simulation analysis also measures radial profiles of:
 - projected dark-matter axis ratio
 
 Profiles from different haloes are compared using the normalized radial
-coordinate
-
-\[
-R/R_{200c}.
-\]
+coordinate R/R200c.
 
 Population statistics are calculated separately for each halo-mass bin and each
 projection using the median and 16th--84th percentile range.
@@ -156,11 +142,10 @@ projection using the median and 16th--84th percentile range.
 
 Several characteristic measurements are extracted from the projected profiles:
 
-- \(q_\star\) and \(q_{\rm DM}\) at \(0.1R_{200c}\)
-- \(q_\star\) and \(q_{\rm DM}\) at \(50\,{\rm kpc}\)
-- \(q_\star\) and \(q_{\rm DM}\) at the radius where
-  \(\mu_g = 30\,{\rm mag\,arcsec^{-2}}\)
-- \(R_{\mu_g=30}/R_{200c}\)
+- q_star and q_DM at 0.1 R200c
+- q_star and q_DM at 50 kpc
+- q_star and q_DM at the radius where mu_g = 30 mag arcsec^-2
+- R_mu_g=30 / R200c
 
 These measurements are used to compare stellar and dark-matter flattening at
 common physical and surface-brightness-defined scales.
@@ -172,14 +157,14 @@ three-dimensional FoF dark-matter particle distribution.
 
 The analysis calculates:
 
-- cumulative \(b/a\)
-- cumulative \(c/a\)
-- shell-based \(b/a\)
-- shell-based \(c/a\)
+- cumulative b/a
+- cumulative c/a
+- shell-based b/a
+- shell-based c/a
 
 using the eigenvalues of the three-dimensional second-moment tensor.
 
-No reduced \(1/r^2\) weighting or iterative ellipsoidal re-selection is used.
+No reduced 1/r^2 weighting or iterative ellipsoidal re-selection is used.
 
 A minimum of 1000 dark-matter particles is required for an intrinsic shape
 measurement.
@@ -227,11 +212,9 @@ four halo-mass bins.
 
 ### `final_paired_qdiff_massbins.py`
 
-Calculates the halo-by-halo paired projected-shape difference
+Calculates the halo-by-halo paired projected-shape difference:
 
-\[
-\Delta q_i = q_{\star,i} - q_{{\rm DM},i}
-\]
+Delta q_i = q_star,i - q_DM,i
 
 before computing population statistics.
 
@@ -255,8 +238,8 @@ Outputs from this directory are used by the scripts in the
 `Comparison/` directory for the direct HSC--TNG analysis.
 
 The direct comparison uses stellar-mass-selected TNG50 systems and synthetic
-\(r\)-band stellar-light maps so that the simulated photometry is compared with
-the HSC \(r\)-band observations in the same photometric band.
+r-band stellar-light maps so that the simulated photometry is compared with
+the HSC r-band observations in the same photometric band.
 
 ## Notes on Reproducibility
 
