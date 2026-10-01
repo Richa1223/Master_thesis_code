@@ -16,10 +16,10 @@ The analysis uses imaging and catalogue products from the
 
 The final science analysis uses:
 
-- HSC PDR3 \(r\)-band imaging
-- approximately \(10'\times10'\) science cutouts
-- HSC pixel scale of approximately \(0.168''\) per pixel
-- AB photometric zero point \(ZP=27\)
+- HSC PDR3 r-band imaging
+- approximately 10 arcmin x 10 arcmin science cutouts
+- HSC pixel scale of approximately 0.168 arcsec per pixel
+- AB photometric zero point ZP = 27
 
 The original HSC FITS cutouts and other large survey products are not included
 in this repository.
@@ -70,13 +70,13 @@ For each galaxy:
 
 - the centre was fixed
 - the axis ratio and orientation were determined from the central galaxy light
-- annuli had a fixed semi-major-axis width of \(5''\)
+- annuli had a fixed semi-major-axis width of 5 arcsec
 - masked and non-finite pixels were excluded
 - iterative sigma clipping was applied
 - the sigma-clipped mean was used as the primary profile estimator
 
-Flux measurements were converted to \(r\)-band surface brightness using the
-HSC pixel scale and \(ZP=27\).
+Flux measurements were converted to r-band surface brightness using the
+HSC pixel scale and ZP = 27.
 
 ## Conversion to Physical Radius
 
@@ -95,18 +95,14 @@ each galaxy using random blank-sky apertures.
 
 The final empirical measurement uses:
 
-- \(5''\times5''\) apertures
-- \(25~\mathrm{arcsec}^2\) aperture area
+- 5 arcsec x 5 arcsec apertures
+- 25 square arcsec aperture area
 - 1000 accepted apertures per field
 - rejection of apertures with more than 25 per cent masked pixels
-- a \(3\sigma\) surface-brightness threshold
+- a 3-sigma surface-brightness threshold
 
-The resulting empirical limits for the final sample span approximately
-
-\[
-28.25 \lesssim \mu_{\rm lim,emp}
-\lesssim 29.18~\mathrm{mag\,arcsec^{-2}}.
-\]
+The empirical surface-brightness limits for the final sample range from
+approximately 28.25 to 29.18 mag arcsec^-2.
 
 ## Reliable Radius
 
@@ -117,11 +113,7 @@ surface-brightness limit.
 The crossing radius was estimated by interpolation between the last profile
 point brighter than the limit and the first point fainter than the limit.
 
-The resulting reliable radii span approximately
-
-\[
-12.5 \text{--} 69.4~\mathrm{kpc}.
-\]
+The resulting reliable radii range from approximately 12.5 to 69.4 kpc.
 
 This radius is used as an observational reliability threshold rather than as a
 physical edge of the stellar distribution.
@@ -140,8 +132,8 @@ sample.
 
 ### `box5x5_final_for_example_galaxy70.py`
 
-Implements the \(5''\times5''\) random-aperture background measurement used to
-estimate the empirical surface-brightness depth.
+Implements the 5 arcsec x 5 arcsec random-aperture background measurement used
+to estimate the empirical surface-brightness depth.
 
 ### `final11_master_table.py`
 
